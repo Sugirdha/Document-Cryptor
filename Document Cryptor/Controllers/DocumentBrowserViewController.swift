@@ -9,7 +9,12 @@ import UIKit
 import os.log
 
 /// - Tag: DocumentBrowserViewController
+
 class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocumentBrowserViewControllerDelegate {
+    
+    var loginPassword = "pw345"
+    var cryptorLogic = CryptorLogic()
+
     
     /// - Tag: viewDidLoad
     override func viewDidLoad() {
@@ -18,7 +23,27 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         
         allowsDocumentCreation = true
         allowsPickingMultipleItems = false
+        
+        cryptorLogic.setPassword(loginPassword)
+
+        
+        let encryptAction = UIDocumentBrowserAction(identifier: "com.sugirdha.DocumentCryptor.encryptFile",
+                                                    localizedTitle: "Encrypt",
+                                                    availability: [.menu]) { (url) in
+            print("file path: \(url[0])")
+            self.cryptorLogic.encrypt(fileToEncrypt: url[0])
+        }
+        let decryptAction = UIDocumentBrowserAction(identifier: "com.sugirdha.DocumentCryptor.decryptFile", localizedTitle: "Decrypt", availability: [.menu]) { (url) in
+            self.cryptorLogic.decrypt(fileToDecrypt: url[0])
+        }
+        
+        encryptAction.supportedContentTypes = ["public.plain-text"]
+        decryptAction.supportedContentTypes = ["public.plain-text"]
+        
+        customActions = [encryptAction, decryptAction]
+        
     }
+    
     
     // MARK: - UIDocumentBrowserViewControllerDelegate
     
