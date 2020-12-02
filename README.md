@@ -23,4 +23,3 @@ To build a file browser app that will allow user to encrypt and decrypt local fi
 * The app only supports text documents now. Modify to add more document types.
 * Update library to meet spec requirements where mismatched.
 * Encrypted documents cannot be decrypted if the user logs in again because encryption key has been changed. Find out how to persist the key for the particular document
-

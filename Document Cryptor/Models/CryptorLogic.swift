@@ -36,10 +36,12 @@ struct CryptorLogic {
 //        print("Have encrypted data in String form: \(encryptedDataString)")
                 
         let encryptedFile = fileToEncrypt.lastPathComponent
-        guard let encryptedFileUrl = dataFilePathUrl?.appendingPathComponent(encryptedFile) else { return "Error getting file url" }
+//        guard let encryptedFileUrl = dataFilePathUrl?.appendingPathComponent(encryptedFile) else { return "Error getting file url" }
             
             do {
-                try encryptedData.write(to: encryptedFileUrl)
+                try encryptedData.write(to: fileToEncrypt)
+//                try encryptedData.write(to: encryptedFileUrl)
+
             } catch {
                 print(error)
             }
@@ -62,10 +64,12 @@ struct CryptorLogic {
 //            print("Have decrypted data in string form: \(decryptedDataString)")
             
             let decryptedFile = fileToDecrypt.lastPathComponent
-            guard let decryptedFileUrl = dataFilePathUrl?.appendingPathComponent(decryptedFile) else { return "Error getting file url" }
+//            guard let decryptedFileUrl = dataFilePathUrl?.appendingPathComponent(decryptedFile) else { return "Error getting file url" }
             
             do {
-                try decryptedData.write(to: decryptedFileUrl)
+                try decryptedData.write(to: fileToDecrypt)
+//                try decryptedData.write(to: decryptedFileUrl)
+
             } catch {
                 print(error)
             }

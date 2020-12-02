@@ -29,11 +29,11 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         
         let encryptAction = UIDocumentBrowserAction(identifier: "com.sugirdha.DocumentCryptor.encryptFile",
                                                     localizedTitle: "Encrypt",
-                                                    availability: [.menu]) { (url) in
+                                                    availability: [.menu, .navigationBar]) { (url) in
             print("file path: \(url[0])")
             self.cryptorLogic.encrypt(fileToEncrypt: url[0])
         }
-        let decryptAction = UIDocumentBrowserAction(identifier: "com.sugirdha.DocumentCryptor.decryptFile", localizedTitle: "Decrypt", availability: [.menu]) { (url) in
+        let decryptAction = UIDocumentBrowserAction(identifier: "com.sugirdha.DocumentCryptor.decryptFile", localizedTitle: "Decrypt", availability: [.menu, .navigationBar]) { (url) in
             self.cryptorLogic.decrypt(fileToDecrypt: url[0])
         }
         
