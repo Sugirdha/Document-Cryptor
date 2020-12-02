@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A87CBF21715612C8711254C /* Pods_Document_Cryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14033A043E2381CCF2EB04AA /* Pods_Document_Cryptor.framework */; };
 		53D75B8B236B67830092A2C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53D75B89236B67830092A2C3 /* Localizable.strings */; };
 		53EA80512368DF7C0041D0C2 /* BrowserSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA80502368DF7C0041D0C2 /* BrowserSceneDelegate.swift */; };
+		5A104A3B2575F7D600428111 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A104A3A2575F7D600428111 /* Security.framework */; };
+		5A2AF20D2575F5FF00DAFA75 /* CryptorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2AF20C2575F5FF00DAFA75 /* CryptorLogic.swift */; };
+		5A4E731E257652BF00099925 /* FetchKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4E731D257652BF00099925 /* FetchKeys.swift */; };
+		5A4E73292576646000099925 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4E73282576646000099925 /* LoginViewController.swift */; };
 		933B67E81EE0961000651EFC /* TextDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933B67E51EE0937800651EFC /* TextDocumentViewController.swift */; };
 		933B67E91EE0961400651EFC /* TextDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933B67E41EE0937800651EFC /* TextDocument.swift */; };
 		93F2086C1EE08D0500345EE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F2086B1EE08D0500345EE5 /* AppDelegate.swift */; };
@@ -19,9 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E7FAF762048893C007A5CA0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		14033A043E2381CCF2EB04AA /* Pods_Document_Cryptor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Document_Cryptor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D75B8A236B67830092A2C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		53EA80502368DF7C0041D0C2 /* BrowserSceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserSceneDelegate.swift; sourceTree = "<group>"; };
+		5A104A3A2575F7D600428111 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5A2AF20C2575F5FF00DAFA75 /* CryptorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptorLogic.swift; sourceTree = "<group>"; };
+		5A4E731D257652BF00099925 /* FetchKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchKeys.swift; sourceTree = "<group>"; };
+		5A4E73282576646000099925 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5A4E7330257676CD00099925 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		74A8F819AAFA3F04FF41C923 /* Pods-Document Cryptor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Document Cryptor.release.xcconfig"; path = "Target Support Files/Pods-Document Cryptor/Pods-Document Cryptor.release.xcconfig"; sourceTree = "<group>"; };
+		8057A842102440C6995D2FC8 /* Pods-Document Cryptor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Document Cryptor.debug.xcconfig"; path = "Target Support Files/Pods-Document Cryptor/Pods-Document Cryptor.debug.xcconfig"; sourceTree = "<group>"; };
 		933B67E41EE0937800651EFC /* TextDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDocument.swift; sourceTree = "<group>"; };
 		933B67E51EE0937800651EFC /* TextDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDocumentViewController.swift; sourceTree = "<group>"; };
 		93F208681EE08D0500345EE5 /* Document Cryptor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Document Cryptor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,12 +52,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A104A3B2575F7D600428111 /* Security.framework in Frameworks */,
+				2A87CBF21715612C8711254C /* Pods_Document_Cryptor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49231713695E884A7FD9DE8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8057A842102440C6995D2FC8 /* Pods-Document Cryptor.debug.xcconfig */,
+				74A8F819AAFA3F04FF41C923 /* Pods-Document Cryptor.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5A4E732025765AF400099925 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A4E73282576646000099925 /* LoginViewController.swift */,
+				93F2086D1EE08D0500345EE5 /* DocumentBrowserViewController.swift */,
+				933B67E51EE0937800651EFC /* TextDocumentViewController.swift */,
+				933B67E41EE0937800651EFC /* TextDocument.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5A4E732225765B0100099925 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A2AF20C2575F5FF00DAFA75 /* CryptorLogic.swift */,
+				5A4E731D257652BF00099925 /* FetchKeys.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5A4E732425765B0B00099925 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93F208731EE08D0500345EE5 /* Main.storyboard */,
+				93F208781EE08D0500345EE5 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5A4E732525765B2100099925 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				53D75B89236B67830092A2C3 /* Localizable.strings */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		616B36A29CBED6B1F20F1513 /* LICENSE */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,11 +125,13 @@
 		93F2085F1EE08D0500345EE5 = {
 			isa = PBXGroup;
 			children = (
-				3E7FAF762048893C007A5CA0 /* README.md */,
+				5A4E7330257676CD00099925 /* README.md */,
 				93F2086A1EE08D0500345EE5 /* Document Cryptor */,
 				93F208691EE08D0500345EE5 /* Products */,
 				772FC696935584ED9F987EF6 /* Configuration */,
 				616B36A29CBED6B1F20F1513 /* LICENSE */,
+				49231713695E884A7FD9DE8B /* Pods */,
+				E6FAB1F98DDCE8D6DE581121 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,16 +148,23 @@
 			children = (
 				93F2086B1EE08D0500345EE5 /* AppDelegate.swift */,
 				53EA80502368DF7C0041D0C2 /* BrowserSceneDelegate.swift */,
-				93F2086D1EE08D0500345EE5 /* DocumentBrowserViewController.swift */,
-				933B67E51EE0937800651EFC /* TextDocumentViewController.swift */,
-				933B67E41EE0937800651EFC /* TextDocument.swift */,
-				93F208731EE08D0500345EE5 /* Main.storyboard */,
-				93F208781EE08D0500345EE5 /* LaunchScreen.storyboard */,
-				53D75B89236B67830092A2C3 /* Localizable.strings */,
+				5A4E732025765AF400099925 /* Controllers */,
+				5A4E732225765B0100099925 /* Models */,
+				5A4E732425765B0B00099925 /* Views */,
+				5A4E732525765B2100099925 /* Supporting Files */,
 				93F208761EE08D0500345EE5 /* Assets.xcassets */,
 				93F2087B1EE08D0500345EE5 /* Info.plist */,
 			);
 			path = "Document Cryptor";
+			sourceTree = "<group>";
+		};
+		E6FAB1F98DDCE8D6DE581121 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A104A3A2575F7D600428111 /* Security.framework */,
+				14033A043E2381CCF2EB04AA /* Pods_Document_Cryptor.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93F2087E1EE08D0500345EE5 /* Build configuration list for PBXNativeTarget "Document Cryptor" */;
 			buildPhases = (
+				F124C1C10CE7F717DA6A032B /* [CP] Check Pods Manifest.lock */,
 				93F208641EE08D0500345EE5 /* Sources */,
 				93F208651EE08D0500345EE5 /* Frameworks */,
 				93F208661EE08D0500345EE5 /* Resources */,
+				942D192215117B942904DF1E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,8 +195,11 @@
 		93F208601EE08D0500345EE5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
 					93F208671EE08D0500345EE5 = {
@@ -167,6 +241,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		942D192215117B942904DF1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Document Cryptor/Pods-Document Cryptor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Document Cryptor/Pods-Document Cryptor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F124C1C10CE7F717DA6A032B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Document Cryptor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		93F208641EE08D0500345EE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -176,7 +293,10 @@
 				93F2086E1EE08D0500345EE5 /* DocumentBrowserViewController.swift in Sources */,
 				53EA80512368DF7C0041D0C2 /* BrowserSceneDelegate.swift in Sources */,
 				93F2086C1EE08D0500345EE5 /* AppDelegate.swift in Sources */,
+				5A4E73292576646000099925 /* LoginViewController.swift in Sources */,
+				5A4E731E257652BF00099925 /* FetchKeys.swift in Sources */,
 				933B67E91EE0961400651EFC /* TextDocument.swift in Sources */,
+				5A2AF20D2575F5FF00DAFA75 /* CryptorLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +332,6 @@
 /* Begin XCBuildConfiguration section */
 		93F2087C1EE08D0500345EE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB5B195B9E6A1E2C4D1FC72B /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -236,6 +355,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -261,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -272,7 +392,6 @@
 		};
 		93F2087D1EE08D0500345EE5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB5B195B9E6A1E2C4D1FC72B /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -296,6 +415,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -315,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -325,16 +445,18 @@
 		};
 		93F2087F1EE08D0500345EE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB5B195B9E6A1E2C4D1FC72B /* SampleCode.xcconfig */;
+			baseConfigurationReference = 8057A842102440C6995D2FC8 /* Pods-Document Cryptor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CA7HV3R45W;
 				INFOPLIST_FILE = "Document Cryptor/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.1;
+				PODS_PODFILE_DIR_PATH = "${SRCROOT}/";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sugirdha.DocumentCryptor;
 				PRODUCT_NAME = "Document Cryptor";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -346,16 +468,18 @@
 		};
 		93F208801EE08D0500345EE5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB5B195B9E6A1E2C4D1FC72B /* SampleCode.xcconfig */;
+			baseConfigurationReference = 74A8F819AAFA3F04FF41C923 /* Pods-Document Cryptor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CA7HV3R45W;
 				INFOPLIST_FILE = "Document Cryptor/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.1;
+				PODS_PODFILE_DIR_PATH = "${SRCROOT}/";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sugirdha.DocumentCryptor;
 				PRODUCT_NAME = "Document Cryptor";
 				PROVISIONING_PROFILE_SPECIFIER = "";
