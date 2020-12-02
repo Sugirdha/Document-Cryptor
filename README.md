@@ -16,9 +16,8 @@ To build a file browser app that will allow user to encrypt and decrypt local fi
 #### External Frameworks/Libraries
 * This project uses a basic document browser code provided by Apple Inc. The Document Browser View Controller has been modified to suit the project brief. More licensing details can be found in the license document.
 * The encryption/decryption features are built using RNCryptor framework. 
-
-        * Some modifications have been done to fix spec mismatches but more parameters need to be changed. Work in progress.
-        * As such, using a common library like RNCryptor is not the safest way to encrypt and decrypt files. For maximum security, it is better to work on my own solution. To be done in the next stage.
+            *  Some modifications have been done to fix spec mismatches but more parameters need to be changed. Work in progress.
+            *  As such, using a common library like RNCryptor is not the safest way to encrypt and decrypt files. For maximum security, it is better to work on my own solution. To be done in the next stage.
         
 #### Known issues / Improvement plans
 * The app only supports text documents now. Modify to add more document types.
