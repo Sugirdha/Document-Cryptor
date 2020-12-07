@@ -1,9 +1,9 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-A document that manages UTF8 text files.
-*/
+//
+//  TextDocument.swift
+//  Document Cryptor
+//
+//  Created by Sugirdha on 1/12/20.
+//  Basic document browser code provided by Apple Inc. More details in the license document
 
 import UIKit
 import os.log

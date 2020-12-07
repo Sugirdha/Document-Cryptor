@@ -1,9 +1,10 @@
-/*
-See LICENSE folder for this sample’s licensing information.
+//
+//  DocumentBrowserViewController.swift
+//  Document Cryptor
+//
+//  Created by Sugirdha on 1/12/20.
+//  Basic document browser code provided by Apple Inc. More details in the license document
 
-Abstract:
-A document browser view controller subclass that implements methods for creating, opening, and importing documents.
-*/
 
 import UIKit
 import os.log
@@ -29,7 +30,6 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         let encryptAction = UIDocumentBrowserAction(identifier: "com.sugirdha.DocumentCryptor.encryptFile",
                                                     localizedTitle: "Encrypt",
                                                     availability: [.menu, .navigationBar]) { (url) in
-            print("file path: \(url[0])")
             self.cryptorLogic.encrypt(fileToEncrypt: url[0])
         }
         let decryptAction = UIDocumentBrowserAction(identifier: "com.sugirdha.DocumentCryptor.decryptFile", localizedTitle: "Decrypt", availability: [.menu, .navigationBar]) { (url) in

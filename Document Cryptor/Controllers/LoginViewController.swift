@@ -3,8 +3,7 @@
 //  Document Cryptor
 //
 //  Created by Sugirdha on 1/12/20.
-//  Copyright © 2020 Apple. All rights reserved.
-//
+
 
 import UIKit
 
