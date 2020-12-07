@@ -12,7 +12,7 @@ import os.log
 
 class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocumentBrowserViewControllerDelegate {
     
-    var loginPassword = "pw345"
+    var loginPassword = ""
     var cryptorLogic = CryptorLogic()
 
     
@@ -25,7 +25,6 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         allowsPickingMultipleItems = false
         
         cryptorLogic.setPassword(loginPassword)
-
         
         let encryptAction = UIDocumentBrowserAction(identifier: "com.sugirdha.DocumentCryptor.encryptFile",
                                                     localizedTitle: "Encrypt",
@@ -41,7 +40,6 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         decryptAction.supportedContentTypes = ["public.plain-text"]
         
         customActions = [encryptAction, decryptAction]
-        
     }
     
     
